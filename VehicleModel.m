@@ -1,29 +1,31 @@
-classdef VehicleModel < handle
-    %VEHICLE Summary of this class goes here
-    %   Detailed explanation goes here
+% MIT License
+% 
+% Copyright (c) 2023 Roman Adámek
+% 
+% Permission is hereby granted, free of charge, to any person obtaining a copy
+% of this software and associated documentation files (the "Software"), to deal
+% in the Software without restriction, including without limitation the rights
+% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+% copies of the Software, and to permit persons to whom the Software is
+% furnished to do so, subject to the following conditions:
+% 
+% The above copyright notice and this permission notice shall be included in all
+% copies or substantial portions of the Software.
+% 
+% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+% SOFTWARE.
+
+classdef VehicleModel < handle  
     
     properties
         m = 2000.0, 			% Mass (kg)
-        I_zz = 3764.0, 			% Inertia (kg m^2)
-%         h_cm = 0.3,	 			% Distance from CG to front axle (m)
-        l_f = 1.53, 			% Distance from CG to front axle (m)
-        l_r = 1.23, 			% Distance from CG to rear axle (m)
-        C_D0 = 241, 			% Coefficient of drag
-        C_D1 = 25.1, 			% Coefficient of drag
-        C_alphaf = 150000.0, 		% Front tire cornering stiffness (N/rad)
-        C_alphar = 280000.0, 		% Rear tire cornering stiffness (N/rad)
-        mu_f = 1.5, 				% Front tire friction
-        mu_r = 1.5, 				% Rear tire friction
-
-        tau_steering = 2;       % steering time constant
-        tau_velocity = 3;       % velocity time constant
-
+        
         max_vel = 5;
-
-%         prev_vel = 0;
-%         prev_steer = 0;
-
-%         state = struct('x', 0, 'y', 0, 'phi', 0);       
     end
     
     methods
