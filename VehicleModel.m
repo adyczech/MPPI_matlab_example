@@ -27,25 +27,10 @@ classdef VehicleModel < handle
     end
     
     methods
-        function self = VehicleModel(init_state)
-            %VEHICLE Construct an instance of this class
-%             self.state.x = init_state(1);
-%             self.state.y = init_state(2);
-%             self.state.phi = init_state(3);
-        end
-        
-        function outputArg = method1(obj,inputArg)
-            %METHOD1 Summary of this method goes here
-            %   Detailed explanation goes here
-            outputArg = obj.Property1 + inputArg;
+        function self = VehicleModel()
         end
 
-        function state = step(self, action, dt, state)%, integration_steps=1)
-%             if nargin > 3
-%                 self.state.x = state(1);
-%                 self.state.y = state(2);
-%                 self.state.phi = state(3);
-%             end
+        function state = step(self, action, dt, state)
             x = state(1);
             y = state(2);
             phi = state(3);
